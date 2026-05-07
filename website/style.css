@@ -1,0 +1,1059 @@
+/* ─── BASE ─────────────────────────────────────────────────────────────────── */
+body {
+    background-color: #f5f3f1;
+    font-family: 'Product Sans', Arial, sans-serif;
+    color: #111318;
+    margin: 0;
+}
+
+/* ─── TOPBAR ────────────────────────────────────────────────────────────────── */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 30px 50px;
+    /* Increased vertical padding from 8px to 15px */
+    z-index: 1000;
+    background-color: #111318;
+    box-sizing: border-box;
+}
+
+.menu-icon {
+    width: 30px;
+    margin-right: 35px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-icon span {
+    display: block;
+    width: 100%;
+    height: 1.2px;
+    background: #f5f3f1;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f5f3f1;
+    font-family: 'Product Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0.3px;
+}
+
+/* ─── HERO ──────────────────────────────────────────────────────────────────── */
+.hero-section {
+    position: relative;
+    width: 100%;
+    display: block;
+    padding-top: 60px;
+    z-index: 1;
+    /* Keep the hero background low */
+}
+
+.bg-landscape-full {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-text-container {
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    z-index: 10;
+}
+
+.hero-text-container h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+}
+
+.scroll-down-container {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mouse-icon {
+    width: 22px;
+    height: 38px;
+    border: 1.5px solid #111318;
+    border-radius: 15px;
+    position: relative;
+}
+
+.mouse-icon::after {
+    content: '';
+    width: 2px;
+    height: 7px;
+    background: #111318;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ─── MALER KOTLA COIN ──────────────────────────────────────────────────────── */
+.coin-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: none;
+    z-index: 9999 !important;
+    width: 500px;
+    height: 500px;
+    cursor: pointer;
+    will-change: transform;
+    pointer-events: auto !important;
+}
+
+.hero-coin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    filter: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.coin-illustration {
+    opacity: 0;
+}
+
+.coin-original {
+    opacity: 1;
+}
+
+.coin-wrapper:hover .coin-illustration {
+    opacity: 1;
+}
+
+.coin-wrapper:hover .coin-original {
+    opacity: 0;
+}
+
+/* ─── BRITISH INDIA COIN ────────────────────────────────────────────────────── */
+.british-coin-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: none;
+    z-index: 9999 !important;
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+    visibility: visible;
+    pointer-events: auto !important;
+    ;
+    cursor: pointer;
+}
+
+.british-coin-wrapper.active {
+    pointer-events: auto;
+}
+
+.british-coin-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    filter: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.british-original {
+    opacity: 0;
+}
+
+.british-illustration {
+    opacity: 1;
+}
+
+.british-coin-wrapper:hover .british-original {
+    opacity: 1;
+}
+
+.british-coin-wrapper:hover .british-illustration {
+    opacity: 0;
+}
+
+/* ─── INDIA 1947 COIN ───────────────────────────────────────────────────────── */
+.india-coin-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: none;
+    z-index: 9999 !important;
+    width: 500px;
+    height: 500px;
+    pointer-events: auto !important;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.india-coin-wrapper.active {
+    pointer-events: auto;
+}
+
+.india-coin-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    filter: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.india-original {
+    opacity: 0;
+}
+
+.india-illustration {
+    opacity: 1;
+}
+
+.india-coin-wrapper:hover .india-original {
+    opacity: 1;
+}
+
+.india-coin-wrapper:hover .india-illustration {
+    opacity: 0;
+}
+
+/* ─── RUPEE COIN ────────────────────────────────────────────────────────────── */
+.rupee-coin-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: none;
+    z-index: 9999 !important;
+    width: 500px;
+    height: 500px;
+    pointer-events: auto !important;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.rupee-coin-wrapper.active {
+    pointer-events: auto;
+}
+
+.rupee-coin-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    filter: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.rupee-original {
+    opacity: 0;
+}
+
+.rupee-illustration {
+    opacity: 1;
+}
+
+.rupee-coin-wrapper:hover .rupee-original {
+    opacity: 1;
+}
+
+.rupee-coin-wrapper:hover .rupee-illustration {
+    opacity: 0;
+}
+
+/* ─── SHARED SECTION STYLES ─────────────────────────────────────────────────── */
+.legacy-section,
+.british-section,
+.india-section,
+.rupee-section {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 120px 6% 60px 6%;
+    background-color: #f5f3f1;
+    position: relative;
+    z-index: 1;
+}
+
+.legacy-section {
+    padding-top: 60px;
+}
+
+.british-section,
+.india-section,
+.rupee-section {
+    opacity: 0;
+}
+
+/* ─── LEFT COLUMNS ──────────────────────────────────────────────────────────── */
+.legacy-left,
+.british-left,
+.india-left,
+.rupee-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.legacy-title,
+.british-title,
+.india-title,
+.rupee-title {
+    margin-top: 0;
+    font-size: 90px;
+    line-height: 1.1;
+    margin-bottom: 40px;
+    font-weight: 500;
+    color: #111318;
+}
+
+.legacy-desc,
+.british-desc,
+.india-desc,
+.rupee-desc {
+    max-width: 320px;
+    font-size: 16.7px;
+    line-height: 1.4;
+    color: #111318;
+    text-align: justify;
+    text-align-last: left;
+    hyphens: auto;
+    margin-top: 20px;
+}
+
+/* ─── RIGHT COLUMNS ─────────────────────────────────────────────────────────── */
+.legacy-right,
+.british-right,
+.india-right,
+.rupee-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.legacy-info-top,
+.british-info-top,
+.india-info-top,
+.rupee-info-top {
+    display: inline-grid;
+    grid-template-areas: "location" "years" "type";
+    justify-items: start;
+    width: auto;
+}
+
+.location,
+.british-location,
+.india-location,
+.rupee-location {
+    grid-area: location;
+    font-size: 25px;
+    color: #a69268;
+    margin-bottom: 5px;
+}
+
+.years,
+.british-years,
+.india-years,
+.rupee-years {
+    grid-area: years;
+    font-size: 90px;
+    line-height: 0.9;
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: -2px;
+}
+
+.type,
+.british-type,
+.india-type,
+.rupee-type {
+    grid-area: type;
+    font-size: 25px;
+    color: #a69268;
+    justify-self: end;
+    margin-top: 0px;
+    white-space: nowrap;
+}
+
+.legacy-detail,
+.british-detail,
+.india-detail,
+.rupee-detail {
+    max-width: 290px;
+    margin-top: 60px;
+    font-size: 16.7px;
+    line-height: 1.4;
+    color: #111318;
+    text-align: justify;
+    text-align-last: right;
+    hyphens: auto;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+/* ─── AUDIO PLAYER ──────────────────────────────────────────────────────────── */
+.audio-player {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 15px 30px 15px 95px;
+    width: 350px;
+    margin-top: 40px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+#audio-player-british,
+#audio-player-india,
+#audio-player-rupee {
+    opacity: 0;
+    position: relative;
+    margin-top: 40px;
+    align-self: flex-end;
+    transform: translateY(30px);
+}
+
+.player-disc {
+    position: absolute;
+    left: -55px;
+    width: 135px;
+    height: 135px;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: spin 3s linear infinite;
+    animation-play-state: paused;
+}
+
+.player-disc img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
+}
+
+.player-disc.is-playing {
+    animation-play-state: running;
+}
+
+@keyframes spin {
+    from {
+        transform: translateY(-50%) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+.player-controls {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+.track-info {
+    text-align: left;
+}
+
+.track-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: block;
+}
+
+.track-sub {
+    font-size: 0.9rem;
+    color: #888;
+    display: block;
+}
+
+.progress-container {
+    width: 100%;
+    height: 5px;
+    background: #e5e5e5;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #4a90e2;
+    border-radius: 10px;
+}
+
+.control-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 5px;
+}
+
+.control-buttons button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #111318;
+}
+
+/* ─── SCROLL SPACER ─────────────────────────────────────────────────────────── */
+.scroll-spacer {
+    height: 100vh;
+}
+
+/* ─── CIRCULATION SECTION ───────────────────────────────────────────────────── */
+.circulation-section {
+    min-height: 1100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    position: relative;
+    z-index: 100;
+    opacity: 0;
+    padding-top: 80px;
+    overflow: visible;
+}
+
+.circulation-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f3f1;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.circulation-section.bg-visible::before {
+    opacity: 1;
+}
+
+.circulation-title {
+    position: sticky;
+    top: 80px;
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: clamp(120px, 16vw, 220px);
+    font-weight: 400;
+    letter-spacing: -2px;
+    color: #111318;
+    margin: 0;
+    text-align: center;
+    height: fit-content;
+    z-index: 101;
+    width: 100%;
+}
+
+/* ─── NOTE ──────────────────────────────────────────────────────────────────── */
+.note-container {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.currency-note {
+    width: 68%;
+    max-width: 800px;
+    height: auto;
+    transform: rotate(-8deg);
+    transform-origin: center center;
+    margin-left: 0;
+    filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.2));
+}
+
+.note-label {
+    position: absolute;
+    left: 6%;
+    top: 35%;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    opacity: 0;
+}
+
+.note-label-text {
+    max-width: 200px;
+}
+
+.note-title {
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111318;
+    margin: 0 0 8px 0;
+    white-space: nowrap;
+}
+
+.note-desc {
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #111318;
+    margin: 0;
+    max-width: 190px;
+}
+
+.note-pointer-line {
+    width: 0px;
+    height: 1px;
+    background: #111318;
+    position: relative;
+    margin-left: 12px;
+    transition: none;
+}
+
+.note-pointer-line::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border: 1.5px solid #111318;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.note-container-2 {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.currency-note-2 {
+    width: 68%;
+    max-width: 800px;
+    height: auto;
+    transform: none;
+    /* ← remove rotate(5deg), let image natural tilt show */
+    transform-origin: center center;
+    filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.2));
+}
+
+.note-label-2 {
+    position: absolute;
+    right: 4%;
+    /* ← sits on right side */
+    top: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    /* ← line first, then text */
+    gap: 0;
+    opacity: 0;
+}
+
+.note-label-text-2 {
+    max-width: 200px;
+    text-align: left;
+    /* ← text aligns left after the line */
+}
+
+.note-title-2 {
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111318;
+    margin: 0 0 8px 0;
+    white-space: nowrap;
+}
+
+.note-desc-2 {
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #111318;
+    margin: 0;
+    max-width: 190px;
+}
+
+.note-pointer-line-2 {
+    width: 0px;
+    height: 1px;
+    background: #111318;
+    position: relative;
+    margin-right: 12px;
+    /* ← gap between line and text */
+    flex-shrink: 0;
+    transition: none;
+}
+
+/* Circle at LEFT end of line — points toward note */
+.note-pointer-line-2::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border: 1.5px solid #111318;
+    border-radius: 50%;
+    background: transparent;
+}
+
+/* Remove the after pseudo element */
+.note-pointer-line-2::after {
+    display: none;
+}
+
+.note-container-3 {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.currency-note-3 {
+    width: 70%;
+    /* ← increased from 68% */
+    max-width: 800px;
+    /* ← increased from 800px */
+    height: auto;
+    transform: none;
+    filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.2));
+}
+
+.note-label-3 {
+    position: absolute;
+    left: 6%;
+    top: 35%;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    opacity: 0;
+}
+
+.note-label-text-3 {
+    max-width: 200px;
+}
+
+.note-title-3 {
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111318;
+    margin: 0 0 8px 0;
+    white-space: nowrap;
+}
+
+.note-desc-3 {
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #111318;
+    margin: 0;
+    max-width: 190px;
+}
+
+.note-pointer-line-3 {
+    width: 0px;
+    height: 1px;
+    background: #111318;
+    position: relative;
+    margin-left: 12px;
+    transition: none;
+}
+
+.note-pointer-line-3::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border: 1.5px solid #111318;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.note-pointer-line-3::before {
+    display: none;
+}
+
+/* Circle at RIGHT end of line pointing toward note */
+.note-pointer-line-3::before {
+    display: none;
+}
+
+.note-pointer-line-3::after {
+    display: block;
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border: 1.5px solid #111318;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.note-container-4 {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.currency-note-4 {
+    width: 75%;
+    max-width: 850px;
+    height: auto;
+    transform: none;
+    filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.2));
+}
+
+.note-label-4 {
+    position: absolute;
+    right: 6%;
+    top: 35%;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    opacity: 0;
+}
+
+.note-label-text-4 {
+    max-width: 200px;
+    text-align: left;
+}
+
+.note-title-4 {
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111318;
+    margin: 0 0 8px 0;
+    white-space: nowrap;
+}
+
+.note-desc-4 {
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #111318;
+    margin: 0;
+    max-width: 190px;
+}
+
+.note-pointer-line-4 {
+    width: 0px;
+    height: 1px;
+    background: #111318;
+    position: relative;
+    margin-right: 12px;
+    transition: none;
+}
+
+.note-pointer-line-4::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border: 1.5px solid #111318;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.note-pointer-line-4::after {
+    display: none;
+}
+
+.circulation-audio {
+    position: fixed;
+    bottom: 6%;
+    right: 6%;
+    z-index: 110;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#audio-player-circulation {
+    margin-top: 0;
+    align-self: unset;
+    transform: none;
+    opacity: 1;
+}
+
+.collapse-title {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: clamp(120px, 16vw, 220px);
+    font-weight: 400;
+    letter-spacing: -2px;
+    color: #111318;
+    margin: 0;
+    text-align: center;
+    z-index: 101;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.note-left-half,
+.note-right-half {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 107;
+    opacity: 0;
+}
+
+.note-left-half img,
+.note-right-half img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.2));
+}
+
+.circulation-audio-collapse {
+    position: fixed;
+    bottom: 6%;
+    right: 6%;
+    z-index: 110;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.digital-shift-title {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: clamp(120px, 16vw, 220px);
+    font-weight: 400;
+    letter-spacing: -2px;
+    color: #111318;
+    margin: 0;
+    text-align: center;
+    z-index: 101;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.digital-assets {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: auto;
+    width: 700px;
+    height: 500px;
+    transform: translate(-50%, -40%);
+}
+
+#digital-1 {
+    /* Apple Pay phone — left, tilted, behind */
+    position: absolute;
+    width: 270px;
+    /* ← increased from 200px */
+    left: -45px;
+    /* ← pulled more left so it overlaps */
+    top: 20px;
+    transform: rotate(-12deg) scale(0);
+    transform-origin: bottom center;
+    z-index: 1;
+}
+
+#digital-2 {
+    /* Paytm — centre front */
+    position: absolute;
+    width: 320px;
+    /* ← increased from 240px */
+    left: 50%;
+    top: -1px;
+    transform: translateX(-50%) scale(0);
+    transform-origin: bottom center;
+    z-index: 3;
+}
+
+#digital-3 {
+    /* Debit card — right, tilted, behind */
+    position: absolute;
+    width: 310px;
+    /* ← increased from 200px */
+    right: -25px;
+    /* ← pulled more right so it overlaps */
+    top: 60px;
+    transform: rotate(12deg) scale(0);
+    transform-origin: bottom center;
+    z-index: 2;
+}
+
+.digital-item {
+    height: auto;
+    object-fit: contain;
+    transform: scale(0);
+    transform-origin: center center;
+    cursor: pointer;
+}

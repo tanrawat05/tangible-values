@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive of Tangible Values</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="topbar">
+        <div class="menu-icon"><span></span><span></span></div>
+        <ul class="nav-links">
+            <li><a href="#exchange">Exchange</a></li>
+            <li><a href="#circulation">Circulation</a></li>
+            <li><a href="#" data-target="collapse">Collapse</a></li>
+            <li><a href="#" data-target="digital-shift">Digital Shift</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero-section" id="exchange">
+        <img src="assets/bg hero.png" alt="Punjab Landscape" class="bg-landscape-full">
+        <div class="hero-text-container">
+            <h1>Enter the <br>Archive of <br>Tangible <br>Values.</h1>
+        </div>
+        <div class="scroll-down-container">
+            <div class="mouse-icon"></div>
+            <span>SCROLL DOWN</span>
+        </div>
+    </header>
+
+    <!-- MALER KOTLA COIN -->
+    <div class="coin-wrapper" id="main-coin">
+        <img src="assets/maler kotla coin illustration.png" alt="Maler Kotla Silver Rupee"
+            class="hero-coin coin-original">
+        <img src="assets/maler kotla coin.png" alt="Maler Kotla Coin Illustration" class="hero-coin coin-illustration">
+    </div>
+
+    <!-- BRITISH INDIA COIN -->
+    <div class="british-coin-wrapper" id="british-coin">
+        <img src="assets/british india coin illlustration.png" alt="British India Coin Illustration"
+            class="british-coin-img british-illustration">
+        <img src="assets/british india coin.png" alt="British India Coin" class="british-coin-img british-original">
+    </div>
+
+    <!-- INDIA 1947 COIN -->
+    <div class="india-coin-wrapper" id="india-coin">
+        <img src="assets/post independance 1947 rupee illustration.png" alt="India 1947 Coin Illustration"
+            class="india-coin-img india-illustration">
+        <img src="assets/post independance 1947 rupee.png" alt="India 1947 Coin" class="india-coin-img india-original">
+    </div>
+
+    <!-- 10 RUPEE COIN -->
+    <div class="rupee-coin-wrapper" id="rupee-coin">
+        <img src="assets/10 rupee coin illustration.png" alt="10 Rupee Coin Illustration"
+            class="rupee-coin-img rupee-illustration">
+        <img src="assets/10 rupee coin.png" alt="10 Rupee Coin" class="rupee-coin-img rupee-original">
+    </div>
+
+    <!-- SECTION 1: MALER KOTLA -->
+    <section class="legacy-section" id="legacy">
+        <div class="legacy-left">
+            <h2 class="legacy-title">Legacy <br>of the <br>Punjab <br>Plains</h2>
+            <p class="legacy-desc">
+                The silver Rupee is a classic example of sovereign coinage from the Princely State of Malerkotla.
+                Issued under the authority of Nawab Amir Khan, this piece represents the pinnacle of local numismatic
+                tradition. Struck in high-purity silver, each coin features traditional Persian inscriptions and the
+                iconic "leaf" mark, reflecting the administrative and cultural sophistication of mid-19th century India.
+            </p>
+        </div>
+        <div class="legacy-right">
+            <div class="legacy-info-top">
+                <span class="location">India, Maler Kotla</span>
+                <h3 class="years">1821– <br>1845 AD</h3>
+                <span class="type">Silver Rupee</span>
+            </div>
+            <p class="legacy-detail">
+                Maler Kotla Silver Rupee (1821-1845), issued under Amir Khan, reflects regional rule in early colonial
+                India. Featuring Persian inscriptions and Mughal-influenced design, it represents economic exchange and
+                political identity during a time of shifting power and local autonomy.
+            </p>
+            <div class="audio-player">
+                <audio id="coin-clink-audio" src="assets/Coin clinking.mp3"></audio>
+                <div class="player-disc">
+                    <img src="assets/tangible values disk.png" alt="Tangible Values Disc">
+                </div>
+                <div class="player-controls">
+                    <div class="track-info">
+                        <span class="track-title">Tangible Values</span>
+                        <span class="track-sub">Exchange (Coin Clink)</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar"></div>
+                    </div>
+                    <div class="control-buttons">
+                        <button class="prev-btn">◀◀</button>
+                        <button class="play-btn" id="play-pause">▶</button>
+                        <button class="next-btn">▶▶</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: BRITISH INDIA -->
+    <section class="british-section" id="british">
+        <div class="british-left">
+            <h2 class="british-title">Symbol <br>of <br>Colonial <br>Authority</h2>
+            <p class="british-desc">
+                The 1862 silver ½ Rupee represents the transition to unified colonial coinage under the British Crown.
+                Introduced after the East India Company's rule ended, it features Queen Victoria's crowned profile,
+                symbolising imperial power and centralised governance. Struck in fine silver, the coin reflects a shift
+                towards standardisation, reinforcing Britain's economic control while circulating widely across the
+                Indian subcontinent as a tool of both trade and political presence.
+            </p>
+        </div>
+        <div class="british-right">
+            <div class="british-info-top">
+                <span class="british-location">British India, Victoria</span>
+                <h3 class="british-years">1862– <br>1876 AD</h3>
+                <span class="british-type">Silver ½ Rupee</span>
+            </div>
+            <p class="british-detail">
+                The British India ½ Rupee (1862), issued under Queen Victoria, marks the formalisation of colonial
+                coinage after the 1857 uprising. Featuring a crowned portrait and English inscriptions, it reflects
+                imperial authority, standardised currency, and expanding British control over India's economic systems.
+            </p>
+            <div class="audio-player" id="audio-player-british">
+                <audio id="coin-clink-audio-2" src="assets/Coin clinking.mp3"></audio>
+                <div class="player-disc" id="disc-2">
+                    <img src="assets/tangible values disk.png" alt="Tangible Values Disc">
+                </div>
+                <div class="player-controls">
+                    <div class="track-info">
+                        <span class="track-title">Tangible Values</span>
+                        <span class="track-sub">Exchange (Coin Clink)</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-2"></div>
+                    </div>
+                    <div class="control-buttons">
+                        <button class="prev-btn">◀◀</button>
+                        <button class="play-btn" id="play-pause-2">▶</button>
+                        <button class="next-btn">▶▶</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: INDIA 1947 -->
+    <section class="india-section" id="india">
+        <div class="india-left">
+            <h2 class="india-title">Birth of <br>a Nation</h2>
+            <p class="india-desc">
+                The 1947 Quarter Rupee represents a defining shift in India's monetary and political history.
+                Issued at the moment of independence, it replaces imperial imagery with national symbolism,
+                most notably the tiger, embodying resilience and power. The use of multiple scripts reflects
+                linguistic diversity and inclusivity, while its widespread circulation established it as a
+                symbol of sovereignty, economic continuity, and the beginning of a self-governed future.
+            </p>
+        </div>
+        <div class="india-right">
+            <div class="india-info-top">
+                <span class="india-location">Independent India</span>
+                <h3 class="india-years">1947 AD</h3>
+                <span class="india-type">Quarter Rupee</span>
+            </div>
+            <p class="india-detail">
+                The India Quarter Rupee (1947) marks the nation's transition to independence following
+                the end of British colonial rule. Featuring the iconic tiger motif and multilingual
+                inscriptions, it symbolises strength, unity, and the emergence of a new national identity
+                during a pivotal historical moment.
+            </p>
+            <div class="audio-player" id="audio-player-india">
+                <audio id="coin-clink-audio-3" src="assets/Coin clinking.mp3"></audio>
+                <div class="player-disc" id="disc-3">
+                    <img src="assets/tangible values disk.png" alt="Tangible Values Disc">
+                </div>
+                <div class="player-controls">
+                    <div class="track-info">
+                        <span class="track-title">Tangible Values</span>
+                        <span class="track-sub">Exchange (Coin Clink)</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-3"></div>
+                    </div>
+                    <div class="control-buttons">
+                        <button class="prev-btn">◀◀</button>
+                        <button class="play-btn" id="play-pause-3">▶</button>
+                        <button class="next-btn">▶▶</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: 10 RUPEE -->
+    <section class="rupee-section" id="rupee">
+        <div class="rupee-left">
+            <h2 class="rupee-title">Currency <br>of a <br>Rising <br>Nation</h2>
+            <p class="rupee-desc">
+                The ₹10 bimetallic coin is a defining example of modern Indian currency design.
+                Combining a brass outer ring with a nickel-brass core, it symbolises strength and stability.
+                Widely circulated, the coin carries the official rupee symbol and denomination, representing
+                India's economic progress, unity in diversity, and transition into a globally connected
+                financial system.
+            </p>
+        </div>
+        <div class="rupee-right">
+            <div class="rupee-info-top">
+                <span class="rupee-location">India</span>
+                <h3 class="rupee-years">2011– <br>Present</h3>
+                <span class="rupee-type">₹10 Bimetallic Coin</span>
+            </div>
+            <p class="rupee-detail">
+                India's ₹10 coin, introduced in the early 21st century, reflects a modernising economy
+                and evolving national identity. Featuring the rupee symbol and bilingual inscriptions,
+                it represents financial growth, accessibility, and everyday circulation in contemporary India.
+            </p>
+            <div class="audio-player" id="audio-player-rupee">
+                <audio id="coin-clink-audio-4" src="assets/Coin clinking.mp3"></audio>
+                <div class="player-disc" id="disc-4">
+                    <img src="assets/tangible values disk.png" alt="Tangible Values Disc">
+                </div>
+                <div class="player-controls">
+                    <div class="track-info">
+                        <span class="track-title">Tangible Values</span>
+                        <span class="track-sub">Exchange (Coin Clink)</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-4"></div>
+                    </div>
+                    <div class="control-buttons">
+                        <button class="prev-btn">◀◀</button>
+                        <button class="play-btn" id="play-pause-4">▶</button>
+                        <button class="next-btn">▶▶</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="scroll-spacer"></div>
+
+    <!-- CIRCULATION SECTION -->
+    <!-- FIRST NOTE -->
+    <section class="circulation-section" id="circulation">
+        <h2 class="circulation-title">CIRCULATION</h2>
+        <div class="note-container" id="note-container">
+            <img src="assets/1937 5 rupee note.png" alt="5 Rupees George VI 1937" class="currency-note">
+            <div class="note-label" id="note-label">
+                <div class="note-label-text">
+                    <h3 class="note-title">5 Rupees: George VI 1937</h3>
+                    <p class="note-desc">India's first Reserve Bank note, promising five rupees to the bearer under
+                        colonial authority.</p>
+                </div>
+                <div class="note-pointer-line"></div>
+            </div>
+        </div>
+        <!-- SECOND NOTE -->
+        <div class="note-container-2" id="note-container-2">
+            <img src="assets/1949 1 rupee note.png" alt="1 Rupee 1949" class="currency-note-2">
+            <div class="note-label-2" id="note-label-2">
+                <div class="note-pointer-line-2"></div>
+                <div class="note-label-text-2">
+                    <h3 class="note-title-2">1 Rupee: India 1949</h3>
+                    <p class="note-desc-2">India's 1949 one rupee note marked early independence, symbolising
+                        sovereignty, transition, and economic identity.</p>
+                </div>
+            </div>
+        </div>
+        <div class="note-container-3" id="note-container-3">
+            <img src="assets/1969 100 rupee note.png" alt="100 Rupee 1969" class="currency-note-3">
+            <div class="note-label-3" id="note-label-3">
+                <div class="note-label-text-3">
+                    <h3 class="note-title-3">100 Rupees: India 1969</h3>
+                    <p class="note-desc-3">1969 hundred rupee note reflects state authority, economic planning, and
+                        visual identity during post-independence nation-building phase.</p>
+                </div>
+                <div class="note-pointer-line-3"></div>
+            </div>
+        </div>
+        </div>
+        <div class="note-container-4" id="note-container-4">
+            <img src="assets/2016 500 rupee note.png" alt="500 Rupee 2016" class="currency-note-4">
+            <div class="note-label-4" id="note-label-4">
+                <div class="note-pointer-line-4"></div>
+                <div class="note-label-text-4">
+                    <h3 class="note-title-4">500 Rupees: India 2016</h3>
+                    <p class="note-desc-4">India's 2016 ₹500 note reflects demonetisation, economic reform,
+                        anti-corruption measures, and transition toward digital transactions nationwide.</p>
+                </div>
+            </div>
+        </div>
+        <div class="circulation-audio" id="circulation-audio">
+            <div class="audio-player" id="audio-player-circulation">
+                <audio id="coin-clink-audio-5" src="assets/Note rustling.mp3"></audio>
+                <div class="player-disc" id="disc-5">
+                    <img src="assets/tangible values disk.png" alt="Tangible Values Disc">
+                </div>
+                <div class="player-controls">
+                    <div class="track-info">
+                        <span class="track-title">Tangible Values</span>
+                        <span class="track-sub">Circulation (Note Rustle)</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-5"></div>
+                    </div>
+                    <div class="control-buttons">
+                        <button class="prev-btn">◀◀</button>
+                        <button class="play-btn" id="play-pause-5">▶</button>
+                        <button class="next-btn">▶▶</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COLLAPSE ELEMENTS — inside circulation-section -->
+        <h2 class="collapse-title" id="collapse-title">COLLAPSE</h2>
+
+        <!-- Two halves of the torn 500 rupee note -->
+        <div class="note-left-half" id="note-left-half">
+            <img src="assets/note left.png" alt="500 Rupee Left Half">
+        </div>
+        <div class="note-right-half" id="note-right-half">
+            <img src="assets/note right.png" alt="500 Rupee Right Half">
+        </div>
+        <!-- DIGITAL SHIFT ELEMENTS -->
+        <h2 class="digital-shift-title" id="digital-shift-title">DIGITAL SHIFT</h2>
+
+        <div class="digital-assets" id="digital-assets">
+            <img src="assets/apple pay.png" alt="Apple Pay" class="digital-item" id="digital-1">
+            <img src="assets/qr scanner.png" alt="Paytm" class="digital-item" id="digital-2">
+            <img src="assets/debit card.png" alt="Debit Card" class="digital-item" id="digital-3">
+        </div>
+
+        <!-- Collapse audio -->
+        <div class="circulation-audio-collapse" id="circulation-audio-collapse">
+            <div class="audio-player">
+                <audio id="coin-clink-audio-6" src="assets/Note crumpling.mp3"></audio>
+                <div class="player-disc" id="disc-6">
+                    <img src="assets/tangible values disk.png" alt="Tangible Values Disc">
+                </div>
+                <div class="player-controls">
+                    <div class="track-info">
+                        <span class="track-title">Tangible Values</span>
+                        <span class="track-sub">Collapse (Note Crumple)</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-6"></div>
+                    </div>
+                    <div class="control-buttons">
+                        <button class="prev-btn">◀◀</button>
+                        <button class="play-btn" id="play-pause-6">▶</button>
+                        <button class="next-btn">▶▶</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="scroll-spacer"></div>
+
+    <script src="script.js"></script>
+
+    <audio id="apple-pay-sound" src="assets/apple_pay_sound.mp3"></audio>
+    <audio id="paytm-sound" src="assets/paytm_sound.mp3"></audio>
+    <audio id="card-sound" src="assets/card_sound.mp3"></audio>
+</body>
+
+</html>
